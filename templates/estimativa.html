@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='all.css')}}">
+    <link rel="stylesheet" href="../static/all.css">
+    <title>Document</title>
+</head>
+<body class="fundo">
+    <div class="quadrado1">
+        <div class="quadrado2">
+            <div class="imagem"></div>  
+        </div>
+        <p class="texto">O preco por enquanto sera de R$ {{ base }} <br> mas para finalizar o pedido</p>
+        <h3>Escolha um sabor:</h3>
+        <form action="/total" method="post">
+            <select name="sabor" id="sabor" required>
+                <option value="calabresa">Calabresa</option>
+                <option value="4queijos">Quatro queijos</option>
+            </select>
+        </form>
+    </div>
+</body>
+</html>

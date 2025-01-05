@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='all.css')}}">
+    <link rel="stylesheet" href="../static/all.css">
+    <title>Calculos de preco</title>
+</head>
+<body class="fundo">
+    <div class="quadrado1">
+        <h1 class="texto">Seja bem vindo a pizzaria "nome da pizzaria"</h1>
+        <p class="texto">Em nossa pizzaria calculamos o preco<br>primeiramente pelo tamanho da pizza...<br>entao o primeiro passo para se fazer sera<br>colocar o tamanho da pizza desejada</p>
+        <form action="/estimativa" method="post">
+            <h3 for="diam" class="texto">Coloque o diametro aqui:</h3>
+            <input type="number" id="diam" name="diam" min="10" required class="diam_inpt">
+            <br>
+            <button type="submit" class="enviar"><strong>Enviar</strong></button>
+        </form>
+        <div class="quadrado2">
+            <div class="imagem"></div>  
+        </div>
+    </div>
+    <br>
+    <p class="creditos">Pizzaria "colocar nome"<br> Site feito por &#10022; Wellington &#10022;</p>
+</body>
+</html>
