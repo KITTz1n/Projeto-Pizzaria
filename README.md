@@ -5,12 +5,7 @@
 <h3>Instalando Bibliotecas</h3>
 <p>Caso tenha um Source Code Editor ou uma IDE <br> Abra ele e no seu terminal digite o seguinte comando</p>
 
-
-<p>
-<code>
-pip install pandas, matplotlib, flask, sklearn
-</code>
-</p>
+<code>pip install pandas, matplotlib, flask, sklearn</code>
 
 <p>Caso não tenha, minha recomendação é instalar o VSCode</p>
 
