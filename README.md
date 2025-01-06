@@ -34,19 +34,19 @@
 <li>
 <h5>Executando-o pelo terminal do Source Code Editor ou IDE</h5>
 Primeiramente veja se o terminal esta na pasta do projeto, deve estar assim aproximadamente<br>
-<code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto></code><br>
+<pre><code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto></code></pre><br>
 Caso de estar so na ate a Pasta2 digite o seguinte<br>
-<code>C:\Users\Name_User\Pasta1\Pasta2> cd Pizzaria_Projeto</code><br>
+<pre><code>C:\Users\Name_User\Pasta1\Pasta2> cd Pizzaria_Projeto</code></pre><br>
 após temos como fazer de 2 formas também:
 <ul>
 <li><h5>Diretamente pelo python</h5>
 Digite o seguinte comando: <br>
-<code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto> python app.py</code><br>
+<pre><code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto> python app.py</code></pre><br>
 E ira rodar o codigo<br>
 </li>
 <li><h5>Versão Específica do python</h5>
 Caso queira executar em uma versão específica do python de o seguint comando:<br>
-<code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto> py -VERSAO_DO_PYTHON_AQUI app.py</code>
+<pre><code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto> py -VERSAO_DO_PYTHON_AQUI app.py</code></pre>
 </li>
 </ul>
 </li>
