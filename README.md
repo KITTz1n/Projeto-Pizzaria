@@ -7,9 +7,9 @@
 
 
 <p>
-  <code>
-      pip install pandas, matplotlib, flask, sklearn
-  </code>
+<code>
+pip install pandas, matplotlib, flask, sklearn
+</code>
 </p>
 
 <p>Caso não tenha, minha recomendação é instalar o VSCode</p>
