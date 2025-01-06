@@ -41,7 +41,7 @@ após temos como fazer de 2 formas também:
 <ul>
 <li><h5>Diretamente pelo python</h5>
 Digite o seguinte comando: <br>
-<pre><code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto> python app.py</code></pre><br>
+<pre><code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto> python app.py</code></pre>
 E ira rodar o codigo<br>
 </li>
 <li><h5>Versão Específica do python</h5>
@@ -77,5 +77,5 @@ Clique no link e após isso você vera o site funcionando
 <h4>Celular</h4>
 <img src="https://github.com/user-attachments/assets/485f70b2-c268-47d0-aa6a-9d65183059d5" alt="exemplo celular">
 <br>
-<h4>PC || FEITO PARA PC AINDA!!!!!!</h4>
-<img src="https://github.com/user-attachments/assets/8f80fd19-a39d-46a5-a1ac-17ba05d86122" alt="exemplo pc"> SENDO 
+<h4>PC || SENDO FEITO PARA PC AINDA!!!!!!</h4>
+<img src="https://github.com/user-attachments/assets/8f80fd19-a39d-46a5-a1ac-17ba05d86122" alt="exemplo pc"> 
