@@ -74,6 +74,8 @@ Press CTRL+C to quit
 Clique no link e após isso você vera o site funcionando
 
 <h2>Imagens do site</h2>
+<h4>Celular</h4>
 <img src="https://github.com/user-attachments/assets/485f70b2-c268-47d0-aa6a-9d65183059d5" alt="exemplo celular">
 <br>
-<img src="https://github.com/user-attachments/assets/8f80fd19-a39d-46a5-a1ac-17ba05d86122" alt="exemplo pc"> SENDO FEITO PARA PC AINDA!!!
+<h4>PC || FEITO PARA PC AINDA!!!!!!</h4>
+<img src="https://github.com/user-attachments/assets/8f80fd19-a39d-46a5-a1ac-17ba05d86122" alt="exemplo pc"> SENDO 
