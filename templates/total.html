@@ -12,7 +12,15 @@
         <div class="quadrado2">
             <div class="imagem"></div>  
         </div>
-        <p class="texto">{{ base }}</p>
+        <h2>Resultado Final:</h2>
+
+{% if erro %}
+    <h3 style="color: red;">{{ erro }}</h3>
+{% else %}
+    <h3>Adicional: R$ {{ adicional }}</h3>
+    <h3>Preço total: R$ {{ preco_total }}</h3>
+{% endif %}
+
     </div>
 </body>
 </html>

@@ -17,6 +17,11 @@
             <br>
             <button type="submit" class="enviar"><strong>Enviar</strong></button>
         </form>
+
+        {% if erro %}
+            <h3 style="color: red;">{{ erro }}</h3>
+        {% endif %}
+
         <div class="quadrado2">
             <div class="imagem"></div>  
         </div>
