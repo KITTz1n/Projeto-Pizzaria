@@ -37,6 +37,7 @@ def total():
     for adicional in sabores['adicional']:
         if adicional not in lista:
             lista.append(adicional)
+            return render_template('teste.html',base=lista)
 
 if __name__ == '__main__':
     app.run(debug=True)
