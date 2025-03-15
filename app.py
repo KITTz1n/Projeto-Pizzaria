@@ -25,7 +25,7 @@ def calculo():
     diametro = request.form.get('diam')
     if diametro is not None:
         diametro = int(diametro)
-        preco = round(modelo.predict([[diametro]])[0][0])
+        preco = round(modelo.predict(pd.DataFrame([[diametro]], columns=['diametro']))[0][0])
         return render_template('estimativa.html',base=preco)
     else:
         return render_template('estimativa.html', base='erro!!!')   
