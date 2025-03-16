@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from flask import Flask, render_template, request, session,redirect,url_for
+from flask import Flask, render_template, request
 from sklearn.linear_model import LinearRegression
 import os
 import secrets
@@ -17,27 +17,18 @@ modelo.fit(x,y)
 caminho_csv2 = os.path.join(app.root_path, 'data/sabor.csv')
 sabores_df = pd.read_csv(caminho_csv2)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def inicio():
-    return render_template('index.html')
-
-@app.route('/estimativa', methods=['POST'])
-def estimativa():
-    diametro = request.form.get('diam')
-    preco = None
-    if diametro:
-        diametro = int(diametro)
-        preco = round(modelo.predict(pd.DataFrame([[diametro]], columns=['diametro']))[0][0])
-
-        session['preco_diam'] = preco  # Armazena o preço do diâmetro na sessão
-        return render_template('estimativa.html', base=preco)  # Exibe a página de estimativa com o preço
-    else:
-        return render_template('index.html', erro='Erro! Insira um valor válido para o diâmetro.')
+    return render_template('index.html', tabela=df.to_html(index=False))
 
 @app.route('/total', methods=['GET','POST'])
 def total():
+    diametro = request.form.get('diam')
     sabor = request.form.get('sabor')
-    preco_diam = session.get('preco_diam',0)
+    preco_diam = None
+    if diametro:
+        diametro = int(diametro)
+        preco_diam = round(modelo.predict(pd.DataFrame([[diametro]], columns=['diametro']))[0][0])
     preco_total = 0
 
     if sabor:

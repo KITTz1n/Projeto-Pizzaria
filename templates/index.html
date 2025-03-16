@@ -5,18 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='all.css')}}">
     <link rel="stylesheet" href="../static/all.css">
+    <style>
+        .tabela
+        {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+        table
+        {
+            border: none;
+            z-index: -10;
+        }
+        td
+        {
+            border: 1px solid black;
+            padding: 8px;
+            z-index: 100000000;
+        }
+        th
+        {
+            background-color: #ffffff;
+            border: none;
+            padding: 8px;
+            border: 1px solid black;
+            z-index: 1000;
+        }
+    </style>
     <title>Calculos de preco</title>
 </head>
 <body class="fundo">
     <div class="quadrado1">
         <h1 class="texto">Seja bem vindo a pizzaria "nome da pizzaria"</h1>
         <p class="texto">Em nossa pizzaria calculamos o preco<br>primeiramente pelo tamanho da pizza...<br>entao o primeiro passo para se fazer sera<br>colocar o tamanho da pizza desejada</p>
-        <form action="/estimativa" method="post">
-            <h3 for="diam" class="texto">Coloque o diametro aqui:</h3>
+        <form action="/total" method="post">
+            <h3 for="diam" class="texto">Coloque o tamanho da pizza em cm</h3>
             <input type="number" id="diam" name="diam" min="10" required class="diam_inpt">
+            <br>
+            <h3 for="sabor" class="texto">Insira o sabor</h3>
+            <select name="sabor" id="sabor" class="diam_inpt" required>
+                <div>
+                    <option value="" disabled selected>Sabores</option>
+                    <option value="calabresa">Calabresa</option>
+                    <option value="Quatro queijos">Quatro queijos</option>
+                    <option value="Lombo">Lombo</option>
+                </div>
+            </select>
             <br>
             <button type="submit" class="enviar"><strong>Enviar</strong></button>
         </form>
+
+        <div class="tabela">
+            {{ tabela|safe }}
+        </div>
 
         {% if erro %}
             <h3 style="color: red;">{{ erro }}</h3>
