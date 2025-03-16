@@ -19,7 +19,7 @@
             <select name="sabor" id="sabor" class="diam_inpt" required>
                 <div>
                     <option value="" disabled selected>Sabores</option>
-                    <option value="calabresa">Calabresa</option>
+                    <option value="calabresa">Calabresa </option>
                     <option value="Quatro queijos">Quatro queijos</option>
                     <option value="Lombo">Lombo</option>
                 </div>
@@ -28,16 +28,18 @@
             <button type="submit" class="enviar"><strong>Enviar</strong></button>
         </form>
 
-        {{ tabela|safe }}
+        <div class="centralizar">{{ tabela|safe }}</div>
 
-        {% if erro %}
-            <h3 style="color: red;">{{ erro }}</h3>
-        {% endif %}
+        <p>
+            {% if erro %}
+                <h3 style="color: red;">{{ erro }}</h3>
+            {% endif %}
+        </p>
 
         <div class="quadrado2">
             <div class="imagem"></div>  
         </div>
-        </div>
+    </div>
     <br>
     <p class="creditos">Pizzaria "colocar nome"<br> Site feito por &#10022; Wellington &#10022;</p>
 </body>

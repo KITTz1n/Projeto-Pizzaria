@@ -19,7 +19,15 @@ sabores_df = pd.read_csv(caminho_csv2)
 
 @app.route('/', methods=['GET', 'POST'])
 def inicio():
-    return render_template('index.html', tabela=df.to_html(classes='tabela'))
+    tabela_html = "<table class='tabela'>"
+    tabela_html += "<tr><th class='borda-esq'>Sabor</th><th class='borda-dir'>Adicional</th></tr>"
+
+    for _, row in sabores_df.iterrows():
+        tabela_html += f"<tr><td class='borda-esq'>{row['sabor']}</td><td class='borda-dir'>{row['adicional']}</td></tr>"
+
+    tabela_html += "</table>"
+
+    return render_template('index.html', tabela=tabela_html)
 
 @app.route('/total', methods=['GET','POST'])
 def total():
