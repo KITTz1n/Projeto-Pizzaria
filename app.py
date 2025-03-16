@@ -19,7 +19,7 @@ sabores_df = pd.read_csv(caminho_csv2)
 
 @app.route('/', methods=['GET', 'POST'])
 def inicio():
-    return render_template('index.html', tabela=df.to_html(index=False))
+    return render_template('index.html', tabela=df.to_html(classes='tabela'))
 
 @app.route('/total', methods=['GET','POST'])
 def total():
