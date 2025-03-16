@@ -83,16 +83,16 @@
 {
     text-align: center;
     border: none;
-    background-color: #000000;
-    color: #b86d17;
+    background-color: #ffffff21;
+    color: black;
     padding: 8px;
     z-index: 100000000;
 }
 .tabela th
 {
     text-align: center;
-    background-color: #fda501;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.802);
+    color: #fda501;
     border: none;
     padding: 8px;
     z-index: 1000;

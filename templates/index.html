@@ -11,11 +11,14 @@
     <div class="quadrado1">
         <h1 class="texto">Seja bem vindo a pizzaria "nome da pizzaria"</h1>
         <p class="texto">Em nossa pizzaria calculamos o preco<br>primeiramente pelo tamanho da pizza...<br>entao o primeiro passo para se fazer sera<br>colocar o tamanho da pizza desejada</p>
+
         <form action="/total" method="post">
             <h3 for="diam" class="texto">Coloque o tamanho da pizza em cm</h3>
             <input type="number" id="diam" name="diam" min="10" required class="diam_inpt">
             <br>
             <h3 for="sabor" class="texto">Insira o sabor</h3>
+            <div class="centralizar">{{ tabela|safe }}</div>
+            <br>
             <select name="sabor" id="sabor" class="diam_inpt" required>
                 <div>
                     <option value="" disabled selected>Sabores</option>
@@ -27,8 +30,6 @@
             <br>
             <button type="submit" class="enviar"><strong>Enviar</strong></button>
         </form>
-
-        <div class="centralizar">{{ tabela|safe }}</div>
 
         <p>
             {% if erro %}
