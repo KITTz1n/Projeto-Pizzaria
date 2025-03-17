@@ -1,7 +1,11 @@
 <h1>Projeto site para pizzaria</h1>
 <h3>Sobre o projeto</h3>
-<p> Esse projeto foi desenvolvido com python usando uma biblioteca chamada Flask
+<p> Esse projeto foi desenvolvido com python usando uma biblioteca/Framework chamado Flask
 </p>
+
+<p>Caso so queira ver o resultado: <a href="https://projeto-pizzaria.onrender.com">Site pizzaria</a></p>
+
+<h2>Intalacao passo a passo( opcional )</h2>
 <h3>Instalando Bibliotecas</h3>
 <p>Caso tenha um Source Code Editor ou uma IDE <br> Abra ele e no seu terminal digite o seguinte comando</p>
 
