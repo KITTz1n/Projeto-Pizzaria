@@ -26,11 +26,7 @@
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid #000000;
     border-radius: 5px;
-    background-color: #e6e1da70;
-}
-.diam_inpt:hover
-{
-    background-color: #e6e1dab9;
+    background-color: #ffffff21;
 }
 .enviar
 {
@@ -79,17 +75,27 @@
 }
 .tabela td
 {
+    position: relative;
     text-align: center;
     border: none;
     background-color: #ffffff21;
     color: black;
     padding: 8px;
-    z-index: 100000000;
+    z-index: 10;
+    overflow: hidden;
+}
+.tomate {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 0, 0, 0.283);
+    border-radius: 50%;
+    z-index: -1;
 }
 .tabela th
 {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.802);
+    background-color: rgba(50, 26, 6, 0.802);
     color: #fda501;
     border: none;
     padding: 8px;
@@ -112,7 +118,42 @@
 }
 .sabores
 {
-
+    width: 50%;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #ffffff21;
+    appearance: none;
+    cursor: pointer;
+}
+.sabores option
+{
+    background-color: #fda501;
+    text-align: center;
+    font-size: 1.25em;
+}
+.inputs
+{
+    width: 50%;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.802);
+    border-radius: 5px;
+    background-color: #ffffff21;
+}
+.inputs::placeholder
+{
+    color: rgba(0, 0, 0, 0.816);
+}
+.textareas
+{
+    width: 90%;
+    height: 100%;
+    resize: none;
+    padding: 3%;
+    border: 1px solid rgba(0, 0, 0, 0.802);
+    border-radius: 5px;
+    background-color: #ffffff21;
+    font-size: 1.2em;
 }
 
 @media (max-width: 1100px)
