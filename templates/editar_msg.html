@@ -32,7 +32,7 @@
             </table>
         </div>
         <div class="centralizar">
-            <form action="{{url_for('enviar_msg')}}" method="post">
+            <form action="{{url_for('enviar_msg')}}" target="_blank" method="post">
                 <h3 for="mensagem">Mensagem a ser enviada:</h3>
                 <br>
                 <textarea name="mensagem" id="mensagem" rows="4" cols="50" required class="textareas">{{mensagem}}</textarea>
