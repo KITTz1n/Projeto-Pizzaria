@@ -1,5 +1,5 @@
 import pandas as pd
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 from sklearn.linear_model import LinearRegression
 import os
 import secrets
@@ -13,13 +13,14 @@ x = df[['diametro']]
 y = df[['preco']]
 modelo.fit(x, y)
 
-numero_pizzaria = 999999999999 # <---------------------- USUARIO INSIRA O NUMERO AQUI
-
 caminho_csv2 = os.path.join(app.root_path, 'data/sabor.csv')
 sabores_df = pd.read_csv(caminho_csv2)
 
 @app.route('/', methods=['GET', 'POST'])
 def inicio():
+
+    numero_pizzaria = request.args.get('numero', '000000000000')
+    
     tabela_html = "<table class='tabela'>"
     tabela_html += "<tr><th class='borda-esq'>Sabor</th><th class='borda-dir'>Adicional</th></tr>"
 
@@ -28,7 +29,12 @@ def inicio():
 
     tabela_html += "</table>"
 
-    return render_template('index.html', tabela=tabela_html)
+    return render_template('index.html', tabela=tabela_html, numero_pizzaria=numero_pizzaria)
+
+@app.before_request
+def before_request():
+    if 'numero' in request.args:  # Se o número foi passado na URL
+        session['numero_pizzaria'] = request.args.get('numero')
 
 @app.route('/editar_msg', methods=['GET', 'POST'])
 def editar_msg():
@@ -60,6 +66,7 @@ def editar_msg():
 
 @app.route('/enviar_msg', methods=['GET','POST'])
 def enviar_msg():
+    numero_pizzaria = session.get('numero_pizzaria', '000000000000')  # Pegando da sessão
     mensagem = request.form.get('mensagem')
     url_whatsapp = f"https://wa.me/{numero_pizzaria}?text={mensagem}"
     return redirect(url_whatsapp)
