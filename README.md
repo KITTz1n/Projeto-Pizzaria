@@ -1,78 +1,70 @@
-<h1>Projeto site para pizzaria</h1>
-<h3>Sobre o projeto</h3>
-<p> Esse projeto foi desenvolvido com python usando uma biblioteca/Framework chamado Flask
-</p>
+# Projeto Site para Pizzaria
 
-<p>Caso so queira ver o resultado: <a href="https://projeto-pizzaria.onrender.com">Site pizzaria</a></p>
+## Sobre o Projeto
+Este projeto foi desenvolvido utilizando **Python** e o framework **Flask**. Ele permite calcular o preço de uma pizza com base no diâmetro e no sabor escolhido, além de gerar uma mensagem automática para pedido via WhatsApp.
 
-<h2>Intalacao passo a passo( opcional )</h2>
-<h3>Instalando Bibliotecas</h3>
-<p>Caso tenha um Source Code Editor ou uma IDE <br> Abra ele e no seu terminal digite o seguinte comando</p>
+🔗 **Veja o projeto funcionando**: [Projeto Pizzaria](https://projeto-pizzaria.onrender.com)
 
-<pre><code>pip install pandas, matplotlib, flask, sklearn</code></pre>
+---
 
-<p>Caso não tenha, minha recomendação é instalar o VSCode</p>
+## Instalação e Execução
 
-<h3>Executar</h3>
+### 📌 Requisitos
+Antes de iniciar, certifique-se de ter instalado:
+- **Python 3.x**
+- **Gerenciador de pacotes `pip`**
 
-<p>Primeiramente encontre o arquivo chamado <code>app.py</code></p>
-
-```
-|—— .gitattributes 
-|—— app.py  <-- AQUI!!!      
-|—— data           
-|    |—— diametro.csv
-|    |—— sabor.csv
-|—— static
-|    |—— all.css
-|    |—— imagens
-|        |—— pizza_img1.jpg
-|—— templates
-|    |—— estimativa.html
-|    |—— index.html
-|—— treino.ipynb
+### 📥 Instalando Dependências
+Abra um terminal na pasta do projeto e execute:
+```sh
+pip install pandas matplotlib flask scikit-learn
 ```
 
-<p>Para executar ele temos duas formas<br>
-<ul>
-<li>
-<h5>Executando-o pelo terminal do Source Code Editor ou IDE</h5>
-Primeiramente veja se o terminal esta na pasta do projeto, deve estar assim aproximadamente<br>
-<pre><code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto></code></pre><br>
-Caso de estar so na ate a Pasta2 digite o seguinte<br>
-<pre><code>C:\Users\Name_User\Pasta1\Pasta2> cd Pizzaria_Projeto</code></pre><br>
-após temos como fazer de 2 formas também:
-<ul>
-<li><h5>Diretamente pelo python</h5>
-Digite o seguinte comando: <br>
-<pre><code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto> python app.py</code></pre>
-E ira rodar o codigo<br>
-</li>
-<li><h5>Versão Específica do python</h5>
-Caso queira executar em uma versão específica do python de o seguint comando:<br>
-<pre><code>C:\Users\Name_User\Pasta1\Pasta2\Pizzaria_Projeto> py -VERSAO_DO_PYTHON_AQUI app.py</code></pre>
-</li>
-</ul>
-</li>
-<li>
-<h5>Executando-o pelo proprio Source Code Editor ou IDE</h5>
-No caso de quem usa VSCode ou algo parecido deve exitir um símbolo de Run File no canto superior direito <br>
-<img src="https://github.com/user-attachments/assets/c578b8c6-9417-4acc-af38-e42bcd91c430" alt="exemplo"></img>
-</li>
-</ul>
-<h3>Após a execução</h3>
-Após você executar o código aparecera no terminal da seguinte maneira:<br>
+### 🚀 Executando o Projeto
 
-```
-PS C:\Users\Name_User\Pasta1\Pasta2> & "C:/Program Files/Python312/python.exe" c:/Users/Name_User/Pasta1/Pasta2/Pizzaria_Projeto/app.py
- * Serving Flask app 'app'
- * Debug mode: on
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on: LINK_VAI_ESTAR_AQUI <--------------
-Press CTRL+C to quit
- * Restarting with watchdog (windowsapi)
- * Debugger is active!
- * Debugger PIN: NUMBER-PIN
-```
+1. Localize o arquivo `app.py` na estrutura de pastas:
+   ```
+   |—— .gitattributes
+   |—— app.py  <-- AQUI!!!      
+   |—— data           
+   |    |—— diametro.csv
+   |    |—— sabor.csv
+   |—— static
+   |    |—— all.css
+   |    |—— imagens
+   |        |—— pizza_img1.jpg
+   |—— templates
+   |    |—— estimativa.html
+   |    |—— index.html
+   |—— treino.ipynb
+   ```
+2. No terminal, navegue até a pasta do projeto:
+   ```sh
+   cd caminho/para/Pizzaria_Projeto
+   ```
+3. Execute o arquivo:
+   ```sh
+   python app.py
+   ```
+   Ou, se precisar usar uma versão específica do Python:
+   ```sh
+   py -VERSAO_DO_PYTHON_AQUI app.py
+   ```
 
-Clique no link e após isso você vera o site funcionando
+### 🖥️ Executando via VS Code ou IDE
+Se estiver usando o **VS Code** ou outra IDE, clique no botão de **Run File** no canto superior direito.
+
+---
+
+## Acessando o Projeto
+Após a execução, o terminal mostrará algo como:
+```sh
+ * Running on: http://127.0.0.1:5000/  <--------------
+```
+Clique no link para acessar o site.
+
+⚠️ **Nota**: Esse servidor é para desenvolvimento. Para produção, use um WSGI server como Gunicorn.
+
+---
+
+Feito com ❤️ para facilitar pedidos de pizza! 🍕
